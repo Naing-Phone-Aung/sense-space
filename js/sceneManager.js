@@ -5,7 +5,7 @@ function getCookie(name) {
     return decodeURIComponent(parts.pop().split(";").shift());
   }
 }
-import { CONFIG } from "./config.js";
+const CONFIG = { API_BASE_URL: "http://sense-backend.ap-southeast-1.elasticbeanstalk.com" };
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";

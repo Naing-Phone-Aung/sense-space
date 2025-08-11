@@ -5,7 +5,7 @@ import {
   SetLockCommand,
   ChangeLightColorCommand,
 } from "./command.js";
-import { CONFIG } from "./config.js";
+const CONFIG = { API_BASE_URL: "http://sense-backend.ap-southeast-1.elasticbeanstalk.com" };
 
 export class UIManager {
   constructor(app) {
