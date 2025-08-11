@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:is(.dark *));
+
+
+
+@font-face {
+  font-family: "Petrov Sans Book";
+  src: url("../../public/assets/fonts/PetrovSans-Book.ttf");
+}
+
+@font-face {
+  font-family: "Petrov Sans Regular";
+  src: url("../../public/assets/fonts/PetrovSans-Regular.ttf");
+}
+
+@theme {
+  --font-petrov-sans-book: "Petrov Sans Book";
+  --font-petrov-sans-regular: "Petrov Sans Regular";
+  --font-mona: "Mona Sans";
+  --font-inter: "Inter";
+  --color-ink: #27272A;
+  --color-milk: #fcfcfc
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Settings Dashboard</title>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+    <script src="./js/authGuard.js" defer></script>
+    <script src="./js/breadcrumb.js" defer></script>
+    <script src="./js/config.js" defer></script>
+    <script src="./js/userSettingDashboardPage.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="../public/assets/images/sense-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="font-inter text-ink bg-white">
+    <nav-bar></nav-bar>
+
+    <section class="w-[90%] mx-auto mb-40">
+      <breadcrumb-component current="Dashboard"></breadcrumb-component>
+
+      <div class="bg-white">
+        <div class="flex items-center justify-between gap-5">
+          <div class="flex items-center gap-5">
+            <div
+              class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center"
+            >
+              <p
+                id="user-initials-display"
+                class="text-sky-600 font-medium text-lg p-3"
+              ></p>
+            </div>
+            <div>
+              <h1 id="user-name-display" class="text-xl font-medium text-ink">
+                Loading...
+              </h1>
+              <p class="text-ink/60 text-sm">
+                Update your username and manage your account
+              </p>
+            </div>
+          </div>
+          <a href="pricingPage.html">
+            <div
+              class="px-4 py-3 border-[1.5px] duration-200 hover:bg-amber-50 border-gray-200 rounded-lg"
+            >
+              <p class="text-center font-semibold text-lg">
+                Go <span class="text-amber-500">Pro</span>
+              </p>
+              <p class="text-ink/80 text-sm">Get 3x for better experiences</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 mt-10 text-lg gap-10">
+        <div class="col-span-1 text-ink">
+          <div class="pb-2 flex flex-col border-b-[1.5px] border-gray-100">
+            <a href="userSettingDashboardPage.html" class="py-1.5 font-semibold"
+              >General</a
+            >
+            <a
+              href="userChangePasswordPage.html"
+              class="py-1.5 text-ink/70 hover:text-ink"
+              >Password</a
+            >
+            <a href="#" class="py-1.5 text-ink/70 hover:text-ink"
+              >Notifications</a
+            >
+            <a href="#" class="py-1.5 text-ink/70 hover:text-ink">Billing</a>
+          </div>
+          <p class="py-1.5 mt-2 text-red-500 cursor-pointer">Delete Account</p>
+        </div>
+
+        <div class="col-span-2 text-base">
+          <div
+            id="success-message"
+            class="hidden p-4 mb-4 text-sm text-green-800 bg-green-50"
+            role="alert"
+          ></div>
+          <div
+            id="error-message"
+            class="hidden p-4 mb-4 text-sm text-red-800 bg-red-50"
+            role="alert"
+          ></div>
+
+          <div class="">
+            <form id="settings-form">
+              <input type="hidden" id="user-id-input" />
+
+              <div class="mb-5">
+                <label for="name-input" class="block mb-2">Username</label>
+                <input
+                  type="text"
+                  id="name-input"
+                  name="name"
+                  class="appearance-none border border-gray-300 rounded-md w-full py-3 px-3 text-ink leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="email-input" class="block mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email-input"
+                  name="email"
+                  class="appearance-none border border-gray-300 rounded-md w-full py-3 px-3 text-ink leading-tight focus:outline-none"
+                  readonly
+                />
+                <p class="text-sm text-ink/50 mt-2">
+                  Email address cannot be changed.
+                </p>
+              </div>
+
+              <div class="mb-7">
+                <p class="block mb-2">Google Sign-in</p>
+                <div
+                  class="px-6 pointer-events-none py-3 text-red-600 font-medium bg-red-50 rounded-lg w-fit"
+                >
+                  Unavilable
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center space-x-2 mb-2">
+                  <label class="">Disable Limitations</label>
+                  <span
+                    class="px-2 py-0.5 bg-gray-900 text-white text-xs rounded"
+                    >PRO</span
+                  >
+                </div>
+                <p class="text-ink/60">
+                  With a Pro account you can disable limitations across the
+                  site.
+                </p>
+              </div>
+
+              <div class="flex items-center justify-end mt-6">
+                <button
+                  id="save-button"
+                  type="submit"
+                  class="bg-ink hover:bg-neutral-700 text-white py-2 px-4 rounded-md focus:shadow-outline transition-colors duration-200"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer-bar></footer-bar>
+  </body>
+</html>

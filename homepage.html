@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free 3D Design Planning Tool</title>
+    <script src="./js/authGuard.js" defer></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./js/homePage.js"></script>
+    <script src="./js/config.js"></script>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="../public/assets/images/sense-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="font-inter bg-white">
+    <div id="toast-container" class="fixed top-5 right-5 z-90 space-y-4"></div>
+    <nav-bar></nav-bar>
+    <section class="text-ink font-inter mt-20">
+      <div class="flex flex-col justify-center gap-5">
+        <p
+          class="font-medium text-4xl text-ink tracking-tight leading-12 w-2/3 font-inter mx-auto text-center"
+        >
+          Create Custom Floor Plans and Therapeutic Spaces Design, Model, and
+          Visualize
+        </p>
+        <p class="text-lg font-inter text-center">
+          Your Perfect Sensory Environment in 2D and 3D
+        </p>
+      </div>
+      <div
+        class="flex justify-center gap-2 mt-5 text-base font-inter font-medium"
+      >
+        <button
+          class="text-white hover:bg-blue-700 duration-400 bg-blue-600 px-6 rounded-md py-3"
+        >
+          Start a Free Trial
+        </button>
+        <button
+          class="bg-blue-100 hover:bg-blue-200 duration-400 text-blue-600 px-6 rounded-md py-3"
+        >
+          Get a Pro
+        </button>
+      </div>
+      <p class="text-center mt-7 font-inter text-lg">
+        Enjoy a Glimpse of Sense Spaces in Action. Step into a world where calm
+        meets creativity.
+      </p>
+
+      <div class="mt-5" id="video-placeholder">
+       
+      </div>
+    </section>
+
+    <!-- information section  -->
+    <section class="text-ink font-inter mt-40 w-[90%] mx-auto">
+      <div class="grid grid-cols-2 items-center">
+        <div class="col-span-1 flex flex-col justify-start gap-5">
+          <p class="text-base"></p>
+          <p class="font-medium text-4xl leading-12">
+            Spark ideas and shape smarter spaces together.
+          </p>
+          <p class="text-lg text-ink/80">
+            Find out how our users are spreading the world!
+          </p>
+        </div>
+        <div class="col-span-1 flex gap-5 items-center justify-end">
+          <div class="flex flex-col gap-5 items-end">
+            <div class="py-4 px-8 bg-gray-100 w-fit rounded-xl">
+              <div class="flex gap-1 items-start">
+                <p class="font-petrov-sans-book text-8xl">8</p>
+                <IoAddSharp class="size-11" />
+              </div>
+              <p class="font-petrov-sans-book text-gray-600">
+                Years Experience
+              </p>
+            </div>
+            <div class="py-4 px-8 bg-gray-100 w-fit rounded-xl">
+              <div class="flex gap-1 items-start">
+                <p class="font-petrov-sans-book text-8xl">99.9</p>
+                <VscPercentage class="size-11" />
+              </div>
+              <p class="font-petrov-sans-book text-gray-600">
+                Satisfaction Rate
+              </p>
+            </div>
+          </div>
+          <div class="py-4 px-8 bg-gray-100 w-fit rounded-xl">
+            <div class="flex gap-1 items-start">
+              <p class="font-petrov-sans-book text-8xl">1 K</p>
+              <IoAddSharp class="size-11" />
+            </div>
+            <p class="font-petrov-sans-book text-gray-600">Happy Customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-ink font-inter mt-40 w-[90%] mx-auto">
+      <div class="flex flex-col justify-center gap-5">
+        <p class="font-medium text-4xl w-3/5 leading-12 mx-auto text-center">
+          Transform your space with smart planning
+        </p>
+        <p class="text-lg text-ink/80 text-center w-1/2 mx-auto">
+          Harness intuitive tools and expert support to design environments that
+          elevate comfort, function, and well-being.
+        </p>
+      </div>
+      <div class="mt-10">
+        <div class="grid grid-cols-12 gap-5">
+          <div class="col-span-1"></div>
+          <div
+            class="col-span-5 p-5 bg-zinc-50 border border-gray-200 rounded-lg gap-10"
+          >
+            <div class="flex flex-col gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
+                />
+              </svg>
+
+              <p class="font-semibold text-lg">Custom Room Design Tools</p>
+              <p class="pb-5">
+                Easily create virtual rooms with specific dimensions to reflect
+                your real-world space. Whether it's a calming corner, therapy
+                room, or entire sensory-friendly home, design it just the way
+                you envision.
+              </p>
+              <img src="../public/assets/images/bathroom.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-span-5 p-5 bg-zinc-50 border border-gray-200 rounded-lg gap-10"
+          >
+            <div class="flex flex-col gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                />
+              </svg>
+
+              <p class="font-semibold text-lg">Multi-Sensory Object Library</p>
+              <p class="pb-5">
+                Access a comprehensive collection of objects organized by
+                sensory categories — touch, light, sound, and movement — each
+                with detailed information to help you make thoughtful decisions.
+              </p>
+              <img src="../public/assets/images/bedroom.png" alt="" />
+            </div>
+          </div>
+          <div class="col-span-1"></div>
+
+          <div class="col-span-1"></div>
+          <div
+            class="col-span-5 p-5 bg-zinc-50 border border-gray-200 rounded-lg gap-10"
+          >
+            <div class="flex flex-col gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"
+                />
+              </svg>
+
+              <p class="font-semibold text-lg">Interactive 3D Visualization</p>
+              <p class="pb-5">
+                Visualize your space in both 2D and 3D. Easily drag, drop, and
+                intuitively arrange interactive sensory elements to see how they
+                fit and function together before making impactful real-life
+                changes.
+              </p>
+              <img src="../public/assets/images/kitchen.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-span-5 p-5 bg-zinc-50 border border-gray-200 rounded-lg gap-10"
+          >
+            <div class="flex flex-col gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                />
+              </svg>
+
+              <p class="font-semibold text-lg">
+                Save, Export, and Share Layouts
+              </p>
+              <p class="pb-5">
+                Store your favorite room configurations, export them for
+                printing or presentation, and share with others — whether it's
+                for collaboration, feedback, or professional planning.
+              </p>
+              <img src="../public/assets/images/livingroom.png" alt="" />
+            </div>
+          </div>
+
+          <div class="col-span-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-ink font-inter mt-40 w-[90%] mx-auto">
+      <div class="flex flex-col justify-center gap-5">
+        <p class="font-medium text-4xl w-4/5 leading-12 mx-auto text-center">
+          We let our client's success to be our speaker
+        </p>
+        <p class="text-lg text-ink/80 text-center w-1/2 mx-auto">
+          Discover their stories, insights, and the real impact of planning
+          spaces with purpose.
+        </p>
+      </div>
+      <div class="py-10">
+        <div class="columns-1 md:columns-3 auto-cols-auto gap-4 space-y-4">
+          <div
+            class="bg-gray-50 drop-shadow-sm rounded-xl px-6 py-5 flex flex-col mb-4 break-inside-avoid"
+          >
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-medium flex items-center justify-center"
+                alt="Rounded avatar"
+              >
+                ML
+              </div>
+
+              <div class="flex flex-col leading-5">
+                <span class="font-medium">Marcus Lim</span>
+                <span class="text-gray-600 text-sm">Freelance Renovator</span>
+              </div>
+            </div>
+            <p class="mt-4">
+              I used to rely on paper sketches. Now I can visually plan spaces,
+              save them, and send updates to clients all in one app. Simple and
+              powerful!
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 drop-shadow-sm rounded-xl px-6 py-5 flex flex-col mb-4 break-inside-avoid"
+          >
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-medium flex items-center justify-center"
+                alt="Rounded avatar"
+              >
+                AG
+              </div>
+
+              <div class="flex flex-col leading-5">
+                <span class="font-medium">Alicia Gomez</span>
+                <span class="text-gray-600 text-sm"
+                  >Startup Office Manager</span
+                >
+              </div>
+            </div>
+            <p class="mt-4">
+              We planned our entire office layout using Sense! Drag-and-drop
+              made it easy for a non-designer like me to visualize everything.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 drop-shadow-sm rounded-xl px-6 py-5 flex flex-col mb-4 break-inside-avoid"
+          >
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 rounded-full bg-rose-100 text-rose-700 font-medium flex items-center justify-center"
+                alt="Rounded avatar"
+              >
+                ET
+              </div>
+
+              <div class="flex flex-col leading-5">
+                <span class="font-medium">Emily Tan</span>
+                <span class="text-gray-600 text-sm">Interior Designer</span>
+              </div>
+            </div>
+            <p class="mt-4">
+              It completely streamlined my workflow. I can share room drafts
+              with clients instantly, collaborate in real time, and make edits
+              on the fly—no more back-and-forth emails or guesswork. It’s
+              intuitive, fast, and has become an essential part of how I deliver
+              professional results efficiently. Total game changer!
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 drop-shadow-sm rounded-xl px-6 py-5 flex flex-col mb-4 break-inside-avoid"
+          >
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-medium flex items-center justify-center"
+                alt="Rounded avatar"
+              >
+                DO
+              </div>
+
+              <div class="flex flex-col leading-5">
+                <span class="font-medium">David Ong</span>
+                <span class="text-gray-600 text-sm">Homeowner</span>
+              </div>
+            </div>
+            <p class="mt-4">
+              I wanted to redesign my living room but didn’t know where to
+              start. This tool helped me test different ideas without lifting a
+              single piece of furniture.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 drop-shadow-sm rounded-xl px-6 py-5 flex flex-col mb-4 break-inside-avoid"
+          >
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 font-medium flex items-center justify-center"
+                alt="Rounded avatar"
+              >
+                RL
+              </div>
+
+              <div class="flex flex-col leading-5">
+                <span class="font-medium">Rachel Lee</span>
+                <span class="text-gray-600 text-sm">Architecture Student</span>
+              </div>
+            </div>
+            <p class="mt-4">
+              As a student, visualizing my design concepts was always a
+              struggle—until I found this. Really helps me build out detailed
+              layouts, and even impresses my professors!
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 drop-shadow-sm rounded-xl px-6 py-5 flex flex-col mb-4 break-inside-avoid"
+          >
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 rounded-full bg-orange-100 text-orange-700 font-medium flex items-center justify-center"
+                alt="Rounded avatar"
+              >
+                JT
+              </div>
+
+              <div class="flex flex-col leading-5">
+                <span class="font-medium">Jonathan Teo</span>
+                <span class="text-gray-600 text-sm">mall Business Owner</span>
+              </div>
+            </div>
+            <p class="mt-4">
+              We used Sense to plan our new café layout. It saved us so much
+              time and money by helping us get the setup right before we moved a
+              single table. Highly recommend it to other shop owners!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-ink font-inter my-40 w-[90%] mx-auto">
+      <div class="flex flex-col justify-center gap-5">
+        <p class="font-medium text-4xl w-3/5 leading-12 mx-auto text-center">
+          Flexible pricing plans for every need
+        </p>
+        <p class="text-lg text-ink/80 text-center w-1/2 mx-auto">
+          Only pay for what you need—start free, upgrade when you’re ready.
+        </p>
+      </div>
+
+      <div
+        id="pricing-cards"
+        class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 px-5 md:px-0"
+      >
+        <!-- Cards will be here -->
+      </div>
+      <p class="mt-10 text-ink/80 text-center w-3/5 mx-auto">
+        Choose from a range of affordable, feature-rich options designed to
+        support your space planning journey—whether you're just starting out or
+        scaling up.
+      </p>
+      <div
+        class="mt-5 flex justify-center items-center space-x-2 px-6 py-3 hover:shadow-sm border-[1.5px] border-gray-300 text-ink w-fit rounded-full mx-auto"
+      >
+        <a href="pricingPage.html">View all plans detail and features</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-5 text-gray-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
+    </section>
+    <footer-bar></footer-bar>
+  </body>
+</html>

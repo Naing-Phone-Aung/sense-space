@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free 3D Design Planning Tool</title>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="./js/authGuard.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./js/adminEditUserPage.js" defer></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/showToast.js" defer></script>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="/public/assets/images/sense-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="font-inter bg-milk text-ink">
+    <side-bar></side-bar>
+    <div class="p-5 mt-10 sm:ml-64">
+      <div class="flex flex-col justify-between items-start py-10 gap-5">
+        <h1 class="text-4xl text-ink/90 font-semibold">Edit Account</h1>
+        <p class="text-ink/70">
+          Please review and update your account information. Ensure all details
+          are accurate and complete, including your full name, a valid email
+          address, a unique username, and a secure password (minimum 8
+          characters, with at least one uppercase letter, one lowercase letter,
+          one number, and one special character). Any changes will be saved and
+          used for verification and account management.
+        </p>
+      </div>
+
+      <form>
+        <div class="">
+          <div class="mb-5">
+            <label
+              for="username"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Enter username"
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Email address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Enter email address"
+              required
+            />
+          </div>
+        
+          <div class="mb-5 text-ink">
+            <h3
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Role
+            </h3>
+            <ul
+              class="items-center w-1/2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="role-user"
+                    type="radio"
+                    value="user"
+                    name="role"
+                    checked
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="role-user"
+                    class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >User</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r-0 dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="role-admin"
+                    type="radio"
+                    value="admin"
+                    name="role"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="role-admin"
+                    class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Admin</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mb-5 text-ink">
+            <h3
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Status
+            </h3>
+            <ul
+              class="items-center w-1/2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="status-active"
+                    type="radio"
+                    value="active"
+                    name="status"
+                    checked
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="status-active"
+                    class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Active</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r-0 dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="status-suspended"
+                    type="radio"
+                    value="suspended"
+                    name="status"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="status-suspended"
+                    class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Suspended</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mb-5 text-ink">
+            <h3
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Subscription
+            </h3>
+            <ul
+              class="items-center w-1/2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="subscription-free"
+                    type="radio"
+                    value="free"
+                    name="subscription"
+                    checked
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="subscription-free"
+                    class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Free User</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r-0 dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="subscription-premium"
+                    type="radio"
+                    value="premium"
+                    name="subscription"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="subscription-premium"
+                    class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Premium User</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free 3D Design Planning Tool</title>
+    <script src="./js/authGuard.js" defer></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+    <script src="./js/breadcrumb.js" defer></script>
+    <script src="./js/aboutTutorialPage.js" defer></script>
+    <script src="./js/pricingPage.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="../public/assets/images/sense-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <body class="font-inter text-ink">
+    <nav-bar></nav-bar>
+    <div class="font-inter w-[90%] mx-auto text-ink" id="tutorial-section">
+      <breadcrumb-component links="[]" current="Pricing"></breadcrumb-component>
+      <div class="flex flex-col gap-5">
+        <p class="uppercase text-xl font-semibold">Pricing Plans</p>
+        <p class="w-1/2 leading-relaxed">
+          No matter your role or project size, our flexible plans are designed
+          to give you the tools and support you need. Unlock powerful features
+          and create personalized spaces with ease — all tailored to fit your
+          goals and budget.
+        </p>
+      </div>
+      <div
+        id="pricing-cards"
+        class="my-10 grid grid-cols-1 md:grid-cols-3 gap-5 px-5 md:px-0"
+      >
+        <!-- Cards will show here -->
+      </div>
+      <p class="mt-10 text-ink/80 text-center w-3/5 mx-auto">
+        Looking to add more than 10 accounts?
+        <a class="underline text-blue-600" href="helpCenterPage.html"
+          >Let’s talk</a
+        >
+        — we offer scalable solutions to support your growing team on the Sense
+        Space Planning Tool.
+      </p>
+      <div
+        class="mt-5 flex px-6 justify-center items-center space-x-2 py-3 hover:shadow-sm border-[1.5px] border-gray-300 text-ink w-fit rounded-full mx-auto"
+      >
+        <a href="#compareplans">Compare plans</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-5 text-gray-600"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="bg-gray-50 mt-20 pt-20">
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col justify-center space-y-10">
+          <div class="flex flex-col space-y-3">
+            <p
+              class="font-medium text-5xl w-3/5 leading-12 mx-auto text-center"
+            >
+              Money Back Guarantee
+            </p>
+            <p class="text-lg text-ink/80 text-center w-3/5 mx-auto">
+              We guarantee results. If we don't secure the media placements
+              promised in your plan, we'll refund you for any coverage we didn't
+              deliver with no questions asked.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-5 flex justify-center items-center space-x-2 px-6 py-3 hover:shadow-sm border-[1.5px] bg-blue-600 text-white hover:bg-blue-700 w-fit rounded-full mx-auto"
+        >
+          <a href="pricingPage.html">Talk to Us</a>
+        </div>
+        <div>
+          <img
+            src="../public/assets/images/guarantee-img.png"
+            class="w-md mx-auto"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white my-40">
+      <div class="flex justify-center items-center flex-col space-y-10">
+        <p class="w-3/5 text-3xl tracking-tight font-medium text-center">
+          "With the Sense Space Planning Tool, I save 4–5 hours each week giving
+          me more time to focus on what truly matters: creating meaningful
+          spaces and moving forward with other important projects.""
+        </p>
+        <div class="flex justify-center items-center gap-4">
+          <img
+            class="size-16 rounded-full"
+            src="../public/assets/images/pricing-profile-img.jpg"
+            alt=""
+          />
+          <div class="font-medium text-xl dark:text-white">
+            <div>Amanda Lee</div>
+            <div class="text-base text-gray-500 dark:text-gray-400">
+              Joined since Jan 2025
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white w-[90%] mx-auto my-40">
+      <div class="flex flex-col justify-start gap-1 mb-5">
+        <p id="compareplans" class="font-semibold text-2xl">
+          Compare features by plan
+        </p>
+        <p class="text-[15px] text-ink/80 text-start">
+          Easily compare features across all available plans.
+        </p>
+      </div>
+      <div id="feature-comparison-container"></div>
+      <div class="flex justify-end mt-10">
+        <a
+          href="#"
+          class="flex px-4 w-fit rounded-md py-2 bg-white hover:shadow-md text-ink shadow-sm text-[15px] font-normal gap-2.5 items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+            />
+          </svg>
+
+          <p class="">Book a Call</p>
+        </a>
+      </div>
+    </div>
+    <footer-bar></footer-bar>
+  </body>
+</html>

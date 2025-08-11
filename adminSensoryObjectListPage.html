@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free 3D Design Planning Tool</title>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="./js/authGuard.js" defer></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./js/adminSensoryObjectListPage.js" defer></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/showToast.js"></script>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="/public/assets/images/sense-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="font-inter bg-milk text-ink">
+    <side-bar></side-bar>
+    <div class="p-5 mt-10 sm:ml-64">
+      <div class="flex justify-between items-center">
+        <h1 class="text-4xl text-ink/90 font-semibold py-10">
+          Sensory Objects
+        </h1>
+        <a
+          href="adminCreateSensoryObjectPage.html"
+          class="flex font-medium text-sm justify-center items-center space-x-2 px-4 py-3 hover:bg-blue-700 bg-blue-600 text-white rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="size-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+          <p>Add New Object</p>
+        </a>
+      </div>
+      <div
+        class="flex flex-row items-center justify-between border-[1.5px] py-2 border-b-0 rounded-t-lg border-gray-200"
+      >
+        <div>
+          <form>
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-400 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                class="block w-sm p-4 ps-12 text-sm text-gray-900 rounded-lg border-0 dark:bg-gray-700 focus:ring-0"
+                placeholder="Search by object name"
+                required
+              />
+            </div>
+          </form>
+        </div>
+        <div class="flex space-x-2 pe-5">
+          <div
+            class="flex items-center space-x-3 px-3 py-1 rounded-lg border-[1.5px] border-gray-300 text-sm text-ink bg-gray-50"
+          >
+            <div class="text-ink/90 font-medium">
+              <p>Show 10 row/page</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6 text-ink/80"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.5 5.625c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v12.75c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 18.375V5.625ZM21 9.375A.375.375 0 0 0 20.625 9h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5ZM10.875 18.75a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5ZM3.375 15h7.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375Zm0-3.75h7.5a.375.375 0 0 0 .375-.375v-1.5A.375.375 0 0 0 10.875 9h-7.5A.375.375 0 0 0 3 9.375v1.5c0 .207.168.375.375.375Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div
+            class="flex items-center space-x-3 px-3 py-1 rounded-lg border-[1.5px] border-gray-300 text-sm text-ink bg-gray-50"
+          >
+            <div class="text-ink/90 font-medium">
+              <p id="total-sensory-objects"></p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-5 text-ink/80"
+            >
+              <path
+                d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="relative overflow-x-scroll">
+        <table
+          class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-sm font-semibold text-ink/80 uppercase dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr class="bg-gray-50">
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                Id
+              </td>
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                Name
+              </td>
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                Category
+              </td>
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                Thumbnail
+              </td>
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                Storage_url
+              </td>
+              <!-- ADDED THIS TABLE HEADER -->
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                USDZ_url
+              </td>
+              <!-- END OF ADDED HEADER -->
+              <td scope="col" class="px-6 py-3 border-[1.5px] border-gray-200">
+                Created Date
+              </td>
+              <td
+                scope="col"
+                class="px-6 py-3 border-[1.5px] border-gray-200"
+              ></td>
+            </tr>
+          </thead>
+          <tbody id="objectsTableBody">
+        
+          </tbody>
+        </table>
+      </div>
+      <nav class="mt-10">
+        <ul
+          class="flex items-center justify-center -space-x-px h-10 text-base"
+        ></ul>
+      </nav>
+    </div>
+  </body>
+</html>

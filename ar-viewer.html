@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Model Viewer</title>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+      }
+      model-viewer {
+        width: 100%;
+        height: 100%;
+        --ar-button-display: none;
+      }
+      #ar-prompt {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 24px;
+        background-color: #007aff;
+        color: white;
+        border-radius: 99px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        display: none; 
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer id="ar-viewer" ar ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" shadow-intensity="1">
+    </model-viewer>
+
+    <button id="ar-prompt" class="text-lg">View in your space</button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modelViewer = document.getElementById("ar-viewer");
+        const arButton = document.getElementById("ar-prompt");
+
+        const params = new URLSearchParams(window.location.search);
+        const glbSrc = params.get("glb");
+        const usdzSrc = params.get("usdz");
+
+        if (glbSrc && usdzSrc) {
+          modelViewer.src = glbSrc;
+          modelViewer.setAttribute("ios-src", usdzSrc);
+          
+          // Show the custom AR button once the model is loaded
+          modelViewer.addEventListener('load', () => {
+              arButton.style.display = 'block';
+          });
+
+          arButton.addEventListener("click", () => {
+            modelViewer.activateAR();
+          });
+
+        } else {
+          document.body.innerHTML = "<p>Error: Model information not found.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>

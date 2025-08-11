@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free 3D Design Planning Tool</title>
+    <script src="./js/authGuard.js" defer></script>
+    <link href="./css/output.css" rel="stylesheet" />
+    <script src="./js/header.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/images/sense-logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="font-inter bg-white">
+    <nav-bar></nav-bar>
+    <section class="font-inter text-ink w-[90%] mx-auto mt-10">
+      <div class="flex flex-col gap-5">
+        <p class="uppercase text-xl font-semibold">Faq</p>
+        <div class="flex flex-col gap-1 w-1/2 leading-relaxed">
+          <p>Got questions? We’ve got answers.</p>
+          <p>Here’s everything you need to know about planning tool.</p>
+        </div>
+
+        <div id="faq-container" class="grid grid-cols-2 gap-5 mt-10 mb-40">
+          <!-- Cards will be injected here -->
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <p class="uppercase text-xl font-semibold">Contact Us</p>
+        <p class="w-1/2 leading-relaxed">
+          Have a question or need help? We’re here for you!
+        </p>
+
+        <div class="mt-10 grid grid-cols-2 gap-16 mb-20">
+          <div
+            class="col-span-1 space-y-5 border-[1.5px] border-neutral-200 p-8 rounded-xl"
+          >
+            <div
+              class="flex flex-col space-y-2 border-b border-neutral-200 pb-5"
+            >
+              <div class="flex flex-col">
+                <p class="font-medium">Chat with us</p>
+                <p class="text-[15px] text-neutral-600">
+                  Connect with us for personalized support.
+                </p>
+              </div>
+              <p class="text-blue-600">support@sense.com</p>
+            </div>
+            <div
+              class="flex flex-col space-y-2 border-b border-neutral-200 pb-5"
+            >
+              <div class="flex flex-col">
+                <p class="font-medium">Call us</p>
+                <p class="text-[15px] text-neutral-600">
+                  Need Help? Call Us Now!
+                </p>
+              </div>
+              <p class="text-blue-600 underline">+95 945 6789 120</p>
+            </div>
+            <div class="flex flex-col space-y-2">
+              <div class="flex flex-col">
+                <p class="font-medium">Visit us</p>
+                <p class="text-[15px] text-neutral-600">
+                  We're Waiting to Welcome You!
+                </p>
+              </div>
+              <p class="text-blue-600 w-2/3">
+                789 Prestige Towers, Suite 405, Downtown District, Central City,
+                12345
+              </p>
+            </div>
+          </div>
+          <div class="col-span-1 flex flex-col justify-center space-y-10">
+            <form class="flex flex-col gap-8">
+              <div>
+                <div>
+                  <label
+                    for="user_name"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="user_name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="user_message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Message</label
+                >
+                <input
+                  type="text"
+                  id="user_message"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Write your message"
+                  required
+                />
+              </div>
+              <button type="submit">
+                <div
+                  class="flex items-center justify-center px-5 py-2.5 text-center text-white bg-ink hover:shadow-sm rounded-lg sm:w-auto"
+                >
+                  Submit
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="mb-40">
+          <iframe
+            width="100%"
+            height="300"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=SENSE%20Company,%20211%20Bukit%20Batok%20Street%20211+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          >
+            <a href="https://www.gps.ie/collections/personal-trackers/">
+              Elderly trackers
+            </a>
+          </iframe>
+        </div>
+      </div>
+    </section>
+    <footer-bar></footer-bar>
+  </body>
+  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="./js/helpCenterPage.js"></script>
+</html>

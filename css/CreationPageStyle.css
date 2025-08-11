@@ -1,0 +1,206 @@
+*{
+    box-sizing: 0;padding:0;margin:0;
+}
+#MySpace-Creation
+{
+    overflow: hidden;
+}
+#Canvas-container{
+    width: 60%;
+    margin: auto;
+}
+#Canvas-Popup, #Canvas-Export-Popup
+{
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+#Canvas-Popup > div, #Canvas-Export-Popup > div
+{
+    background: white;
+    width: 40%;
+    margin: 5% auto;
+    padding: 3%;
+    border-radius: 15px;
+    align-content: center;
+    justify-content: center;
+}
+#GenerateRoom
+{
+    margin: auto;
+}
+.CanvasGUI
+{
+    height: 100%;
+    position: absolute;
+    top:0;
+    background: white;
+    width: 20%;
+    z-index: 1;
+    padding: 1%;
+}
+
+#Canvas-GUI-1
+{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
+}
+#Canvas-GUI-3
+{
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.295);
+    /* z-index: 1; */
+}
+.CanvasGUI label
+{
+    width: 100%;
+}
+#Canvas-GUI-2
+{
+    background: rgba(0, 0, 0, 0.377);
+    display: none;
+    /* display: block; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 5%;
+}
+
+.Model-Container
+{
+    background: white;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    padding: 1% 2%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    overflow: auto;
+}
+
+#Model-Wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 1px solid rgb(218, 218, 218); */
+    height: 70%;
+    /* min-height: 70%;
+    max-height: 60%; */
+    overflow: auto;
+    margin: 1% 0%;
+    
+}
+
+#Texture-Wrapper
+{
+    /* background: yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid rgb(218, 218, 218);
+    /* height: 50%; */
+    /* min-height: 90%; */
+    /* max-height: 90%; */
+    overflow: auto;
+    margin: 2% 0%;
+}
+
+#Texture-container
+{
+    display: none;
+    height: 50%;
+    overflow: auto;
+    /* background: red; */
+}
+
+.ModelImg-Wrapper
+{
+    /* border: 1px solid rgb(3, 3, 3); */
+    width: 30%;
+    max-height: 50%;
+    margin-bottom: 2%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    height: 100%;
+    object-fit: cover;
+    background: rgb(116, 116, 116);
+}
+
+.Img-Wrapper
+{
+    /* border: 1px solid rgb(3, 3, 3); */
+    width: 49%;
+    max-height: 50%;
+    margin-bottom: 2%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    /* background: lightpink; */
+}
+
+.Model-Img, .ModelImg-Wrapper
+{
+    height: 100%;
+    object-fit: cover;
+}
+
+.Img-Name
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    
+    background: rgba(255, 255, 255, 0.452);
+}
+
+#ExitModal
+{
+    /* width: 15%;
+    background: rgba(0,0,0,0.3);
+    padding: 2%;
+    border-radius: 15px;
+    position: absolute;
+    right: 5%;
+    top: 1%; */
+}
+#addModel{
+    border-radius: 15px;
+    width: 50%;
+    background: rgba(0,0,0,1);
+    padding: 2%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+#Canvas-GUI-3
+{
+    position: absolute;
+    right: 0;
+}
+
+.required
+{
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+    display: none;
+}
+
+.line
+{
+    display: block;
+    background-color: rgba(122, 122, 122, 0.634);
+    height: 1px;
+}
