@@ -5,7 +5,7 @@ import {
   SetLockCommand,
   ChangeLightColorCommand,
 } from "./command.js";
-const CONFIG = { API_BASE_URL: "http://localhost:8070" };
+import { CONFIG } from "./config.js";
 
 export class UIManager {
   constructor(app) {

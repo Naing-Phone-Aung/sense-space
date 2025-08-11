@@ -5,7 +5,7 @@ function getCookie(name) {
     return decodeURIComponent(parts.pop().split(";").shift());
   }
 }
-const CONFIG = { API_BASE_URL: "http://localhost:8070" };
+import { CONFIG } from "./config.js";
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
